@@ -19,3 +19,25 @@ public:
 	    return res;
 	}
 };
+
+//Greedy
+class Solution {
+public:
+	int wiggleMaxLength(vector<int>& nums) {
+		const int n = nums.size();
+		if (n <= 1) return n;
+		int res=1, count=1;
+		int prevInc=0;
+		for(int i = 1; i < n; i++) {
+            if(nums[i] > nums[i - 1] && (prevInc == 0 || prevInc==-1)) {
+                prevInc = 1;
+                count++;
+            } else if(nums[i] < nums[i - 1] && (prevInc == 0 || prevInc==1)) {
+                prevInc = -1;
+                count++;
+            }
+            res = max(res, count);
+        }
+        return res;
+	}
+};
