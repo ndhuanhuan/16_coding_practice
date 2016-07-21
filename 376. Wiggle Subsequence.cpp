@@ -12,8 +12,8 @@ public:
 		    for(int j=0;j<i;j++)
 		    {
 		         pos[i] = max(pos[i], (neg[j] + 1) * (nums[j] > nums[i]?1:-1));
-                neg[i] = max(neg[i], (pos[j] + 1) * (nums[j] < nums[i]?1:-1));
-                res = max({res, pos[i], neg[i]});
+                	 neg[i] = max(neg[i], (pos[j] + 1) * (nums[j] < nums[i]?1:-1));
+                	 res = max({res, pos[i], neg[i]});
 		    }
 		}
 	    return res;
