@@ -1,3 +1,5 @@
+
+//http://www.cnblogs.com/grandyang/p/5272039.html
 class Solution {
 public:
     vector<vector<int>> palindromePairs(vector<string>& words) {
