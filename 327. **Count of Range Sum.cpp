@@ -1,3 +1,4 @@
+//http://www.cnblogs.com/grandyang/p/5162678.html
 class Solution {
 public:
     int countRangeSum(vector<int>& nums, int lower, int upper) {
