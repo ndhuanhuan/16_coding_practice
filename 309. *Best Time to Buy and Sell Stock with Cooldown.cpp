@@ -1,4 +1,5 @@
 //http://www.cnblogs.com/grandyang/p/4997417.html
+//https://www.hrwhisper.me/leetcode-best-time-to-buy-and-sell-stock-with-cooldown/
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
