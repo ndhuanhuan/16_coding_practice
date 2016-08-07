@@ -1,5 +1,7 @@
 //http://www.cnblogs.com/zichi/p/4806998.html
 //http://www.cnblogs.com/grandyang/p/4985506.html
+//http://blog.jobbole.com/96430/
+//
 
 class NumArray {
 public:
