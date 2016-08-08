@@ -34,3 +34,76 @@ private:
     vector<int> num;
     vector<int> bit;
 };
+
+
+
+
+
+class SegNode{
+public:
+    int start, end, sum;
+    SegNode* left;
+    SegNode* right;
+    SegNode(int s, int e){
+        start = s; end = e;
+        sum = 0;
+    }
+};
+
+
+//http://www.cnblogs.com/jcliBlogger/p/4989021.html
+class NumArray {
+private:
+    SegNode* root;
+    SegNode* buildTree(vector<int>& nums, int s, int e){
+        if (s > e) return NULL;
+        SegNode* node = new SegNode(s, e);
+        if (s == e){
+            node->sum = nums[s];
+        }else{
+           int mid = (s + e)/2;
+           node->left = buildTree(nums, s, mid);
+           node->right = buildTree(nums, mid+1, e);
+           node->sum = node->left->sum + node->right->sum;
+        }
+        return node;
+    }
+    
+    int sumTree(int s, int e, SegNode* node){
+        if (node->start == s && node->end == e) return node->sum;
+        int mid = (node->start + node->end)/2;
+        if (e <= mid)
+            return sumTree(s, e, node->left);
+        else if (s > mid)
+            return sumTree(s, e, node->right);
+        else
+            return sumTree(s, mid, node->left) + sumTree(mid+1, e, node->right);
+    }
+    
+    void updateTree(int i, int val, SegNode* node){
+        if (node == NULL) return;
+        if (node->start == node->end && node->start == i){
+            node->sum = val;
+            return;
+        }
+        int mid = (node->start + node->end)/2;
+        if (i <= mid)
+            updateTree(i, val, node->left);
+        else
+            updateTree(i, val, node->right);
+        node->sum = node->left->sum + node->right->sum;
+    }
+    
+public:
+    NumArray(vector<int> &nums) {
+        root = buildTree(nums, 0, nums.size()-1);
+    }
+
+    void update(int i, int val) {
+        updateTree(i, val, root);
+    }
+
+    int sumRange(int i, int j) {
+        return sumTree(i, j, root);
+    }
+};
