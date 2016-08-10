@@ -1,3 +1,4 @@
+//http://www.cnblogs.com/grandyang/p/4635425.html
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
