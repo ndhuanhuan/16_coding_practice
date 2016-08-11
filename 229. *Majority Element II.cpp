@@ -1,4 +1,4 @@
-
+//http://www.cnblogs.com/grandyang/p/4606822.html
 class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
