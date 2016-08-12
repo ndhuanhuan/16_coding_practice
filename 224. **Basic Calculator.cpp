@@ -1,3 +1,4 @@
+//https://discuss.leetcode.com/topic/15775/simple-c-in-24-ms
 class Solution {
 public:
     int calculate(string s) {
