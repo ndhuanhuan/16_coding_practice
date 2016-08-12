@@ -1,3 +1,4 @@
+//http://www.cnblogs.com/grandyang/p/4539680.html
 class Solution {
 public:
     bool containsNearbyDuplicate(vector<int>& nums, int k) {
