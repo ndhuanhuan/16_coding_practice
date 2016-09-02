@@ -1,4 +1,4 @@
-//http://www.cnblogs.com/grandyang/p/5582633.html
+//http://www.cnblogs.com/grandyang/p/5579271.html
 class Solution {
 public:
     bool isReflected(vector<pair<int, int>>& points) {
