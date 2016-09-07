@@ -7,7 +7,7 @@ public:
             ++remaining[c];
         }
 
-        unordered_set<char> in_stack;
+        unordered_set<char> in_stack; //quick access to current stack(as we cannot random access stack)
         string stk;
         for (const auto& c : s) {
             if (!in_stack.count(c)) {
