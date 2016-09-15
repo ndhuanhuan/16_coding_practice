@@ -1,5 +1,7 @@
 //http://www.cnblogs.com/grandyang/p/4782695.html
 //https://www.hrwhisper.me/leetcode-h-index-h-index-ii/
+
+//ascending order!!!!
 class Solution {
 public:
     int hIndex(vector<int>& citations) {
