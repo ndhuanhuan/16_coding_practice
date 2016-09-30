@@ -1,4 +1,4 @@
-、http://www.cnblogs.com/grandyang/p/4233501.html
+//http://www.cnblogs.com/grandyang/p/4233501.html
 class Solution {
 public:
     int majorityElement(vector<int> &num) {
