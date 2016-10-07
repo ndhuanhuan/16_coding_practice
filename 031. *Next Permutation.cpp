@@ -14,6 +14,6 @@ public:
                 return;
             }
         }
-        reverse(num.begin(), num.end());
+        reverse(num.begin(), num.end()); //no violation,reverse all
     }
 };
