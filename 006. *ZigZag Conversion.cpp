@@ -10,7 +10,7 @@ public:
             while(j<s.size()) {
                 ret.push_back(s[j]);
                 if(d1!=0 && d1!=inc && j+d1<s.size()) 
-                    ret.push_back(s[j+d1]);
+                    ret.push_back(s[j+d1]);               //last row and first row are special, other row, need to add twice(two numbers) for each loop.
                 j += inc;
             }
         }
