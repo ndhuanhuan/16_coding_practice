@@ -17,7 +17,7 @@ public:
                 for (int j = 0; j <= n - len; ++j) {
                     for (int k = 1; k < len; ++k) {
                         if ((dp[i][j][k] && dp[i + k][j + k][len - k]) || (dp[i + k][j][len - k] && dp[i][j + len - k][k])) {
-                            dp[i][j][len] = true;
+                            dp[i][j][len] = true;     //be careful with len, you should know what it means.
                         }
                     }
                 }
