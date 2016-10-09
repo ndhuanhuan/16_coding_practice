@@ -1,4 +1,5 @@
 //http://www.cnblogs.com/grandyang/p/5174322.html
+// give one star because not familiar with this question
 class Solution {
 public:
     int read(char *buf, int n) {
