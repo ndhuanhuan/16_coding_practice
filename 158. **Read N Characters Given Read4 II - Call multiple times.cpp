@@ -1,4 +1,4 @@
-
+//http://www.cnblogs.com/grandyang/p/5181672.html
 // Forward declaration of the read4 API.
 int read4(char *buf);  //this guy will always read from buffs begining, so the challenge is that we'll call read multiple times, where is the beginning of read
 
