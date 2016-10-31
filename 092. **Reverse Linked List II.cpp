@@ -1,4 +1,5 @@
 //http://www.cnblogs.com/grandyang/p/4306611.html
+//http://bangbingsyb.blogspot.com/2014/11/leetcode-reverse-linked-list-ii.html
 class Solution {
 public:
     ListNode *reverseBetween(ListNode *head, int m, int n) {
