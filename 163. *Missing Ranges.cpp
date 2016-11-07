@@ -1,4 +1,5 @@
 //http://www.voidcn.com/blog/pointbreak1/article/p-4357136.html
+//http://www.cnblogs.com/grandyang/p/5184890.html
 class Solution {
 public:
     vector<string> findMissingRanges(vector<int>& nums, int lower, int upper) {
