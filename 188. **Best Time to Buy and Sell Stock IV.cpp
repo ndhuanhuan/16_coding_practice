@@ -11,7 +11,7 @@ public:
         int l[k + 1] = {0};
         for (int i = 0; i < prices.size() - 1; ++i) {
             int diff = prices[i + 1] - prices[i];
-            for (int j = k; j >= 1; --j) {
+            for (int j = k; j >= 1; --j) {    //Important: this means this is kth transaction, we go from k to 1.
                 l[j] = max(g[j - 1] + max(diff, 0), l[j] + diff);
                 g[j] = max(g[j], l[j]);
             }
