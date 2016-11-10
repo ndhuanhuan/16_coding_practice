@@ -1,5 +1,6 @@
 //http://blog.csdn.net/linhuanmars/article/details/23236995
 //http://www.cnblogs.com/grandyang/p/4295761.html
+//https://discuss.leetcode.com/topic/65403/6ms-c-solution
 class Solution {
 public:
     int maxProfit(int k, vector<int> &prices) {
