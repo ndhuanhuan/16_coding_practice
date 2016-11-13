@@ -6,8 +6,8 @@ public:
         vector<int> res;
         deque<int> q;
         for (int i = 0; i < nums.size(); ++i) {
-            if (!q.empty() && q.front() == i - k) q.pop_front();
-            while (!q.empty() && nums[q.back()] < nums[i]) q.pop_back();
+            if (!q.empty() && q.front() == i - k) q.pop_front();           //if index is i-k , the window is full, we should pop old element.
+            while (!q.empty() && nums[q.back()] < nums[i]) q.pop_back(); //make sure sequence is increasing.
             q.push_back(i);
             if (i >= k - 1) res.push_back(nums[q.front()]);
         }
