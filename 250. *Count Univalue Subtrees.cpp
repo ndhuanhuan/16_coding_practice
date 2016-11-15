@@ -12,6 +12,7 @@ public:
         if (!isUnival(root->left, root->val, res) | !isUnival(root->right, root->val, res)) {
             return false;
         }
-        ++res;return root->val == val;
+        ++res;
+        return root->val == val;
     }
 };
