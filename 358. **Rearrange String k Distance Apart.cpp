@@ -18,7 +18,7 @@ public:
                 if (q.empty()) return "";
                 auto t = q.top(); q.pop();
                 res.push_back(t.second);
-                if (--t.first > 0) v.push_back(t);
+                if (--t.first > 0) v.push_back(t);  //if not used all of it, we will push it into 'v', then it will push back to priority queue for future use.
                 --len;
             }
             for (auto a : v) q.push(a);
