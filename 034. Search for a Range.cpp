@@ -50,24 +50,4 @@ public:
 };
 
 
-Update: we may unify the left and right boundaries using just a single function. In Stefan's post, only the function for the left boundary is used. If we want to find the right boundary of target, we just find the left boundary of target + 1 and subtract it by 1. The code is rewritten below.
 
-class Solution {
-public:
-    vector<int> searchRange(vector<int>& nums, int target) {
-        int n = nums.size();
-        int l = left(nums, target);
-        if (l < 0 || l >= n || nums[l] != target) return {-1, -1};
-        return {l, left(nums, target + 1) - 1};
-    }
-private:
-    int left(vector<int>& nums, int target) {
-        int n = nums.size(), l = 0, r = n; 
-        while (l < r) {
-            int mid = (l + r) / 2;
-            if (nums[mid] < target) l = mid + 1;
-            else r = mid;
-        }
-        return l;
-    }
-};
