@@ -76,6 +76,37 @@ vector<Interval> myInsert(vector<Interval> &intervals, Interval newInterval)
 
 
 
+static bool myCompare(Interval it1, Interval it2) {
+	return it1.start < it2.start;
+}
+vector<Interval> merge(vector<Interval>& intervals) {
+	if (intervals.size() <= 1) return intervals;
+	int cover = 0;
+	vector<Interval> res;
+	sort(intervals.begin(), intervals.end(), myCompare);
+	res.push_back(intervals[0]);
+	cover += (intervals[0].end - intervals[0].start+1);
+	for (int i = 1; i < intervals.size(); ++i) {
+		int pre_end = res.back().end;
+		if (intervals[i].start > pre_end) 
+		{
+			res.push_back(intervals[i]);
+			cover += (intervals[i].end - intervals[i].start+1);
+		}
+			
+		else 
+		{
+			res.back().end = max(pre_end, intervals[i].end);
+			cover += (res.back().end - pre_end);
+		}
+			
+	}
+
+	std::cout << "Total coverage: " << cover << endl;
+	return res;
+}
+
+
 
 
 int main() {
@@ -89,29 +120,44 @@ int main() {
 	intervals.push_back(Interval(1, 2));
 	for (auto a : intervals)
 	{
-		cout << a.start << " " << a.end << endl;
+		std::cout << a.start << " " << a.end << endl;
 	}
 
-	cout << "end of original intervals." << endl;
+	std::cout << "end of original intervals." << endl;
 
 
 
 	sort(intervals.begin(), intervals.end(), compInterval());
 	for (auto a : intervals) 
 	{
-		cout << a.start << " " << a.end << endl;
+		std::cout << a.start << " " << a.end << endl;
 	}
-	cout << "end of sorted intervals." << endl;
+	std::cout << "end of sorted intervals." << endl;
 
 
+	vector<Interval> intervals2;
+	//[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]
+	intervals2.push_back(Interval(1, 3));
+	intervals2.push_back(Interval(2, 6));
+	intervals2.push_back(Interval(8, 10));
+	intervals2.push_back(Interval(15, 18));
 
 
-	vector<Interval> res = myInsert(intervals, Interval(4, 9));
+	vector<Interval> res = merge(intervals2);
 	for (auto a : res)
 	{
-		cout << a.start << " " << a.end << endl;
+		std::cout << a.start << " " << a.end << endl;
 	}
-	cout << "end of sorted intervals." << endl;
+	std::cout << "end of merged intervals." << endl;
+
+
+
+	/*vector<Interval> res = myInsert(intervals, Interval(4, 9));
+	for (auto a : res)
+	{
+		std::cout << a.start << " " << a.end << endl;
+	}
+	std::cout << "end of sorted intervals." << endl;*/
 
 	return 0;
 }
