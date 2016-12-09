@@ -56,6 +56,7 @@ vector<Interval> myInsert(vector<Interval> &intervals, Interval newInterval)
 	{
 		i = left - 1;
 		if (i>0)
+			//insert intervals that are before insert position.
 			result.insert(result.end(), intervals.begin(), intervals.begin() + i);
 		while (i < intervals.size() && newInterval.start > intervals[i].end) {
 			result.push_back(intervals[i++]);
