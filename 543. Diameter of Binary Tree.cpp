@@ -17,14 +17,9 @@ public:
     }
     int maxDepth(TreeNode* node, int& res) {
         if (!node) return 0;
-        if (m.count(node)) return m[node];
         int left = maxDepth(node->left, res);
         int right = maxDepth(node->right, res);
         res = max(res, left + right);
-        m[node] = max(left, right) + 1;
-        return m[node];
+        return max(left, right) + 1;
     }
-
-private:
-    unordered_map<TreeNode*, int> m;
 };
