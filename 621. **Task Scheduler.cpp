@@ -18,7 +18,7 @@ public:
         int partLen = n - (mxCnt - 1);
         int emptySlots = partCnt * partLen;
         int taskLeft = tasks.size() - mx * mxCnt;
-        int idles = max(0, emptySlots - taskLeft);
+        int idles = max(0, emptySlots - taskLeft); //most hard to understand part. If emptySlots> taskleft, which means we need to add more idles.
         return tasks.size() + idles;
     }
 };
