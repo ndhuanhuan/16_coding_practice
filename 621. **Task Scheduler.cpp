@@ -19,6 +19,8 @@ public:
         int emptySlots = partCnt * partLen;
         int taskLeft = tasks.size() - mx * mxCnt;
         int idles = max(0, emptySlots - taskLeft); //most hard to understand part. If emptySlots> taskleft, which means we need to add more idles.
+                                                   //Otherwise, if taskleft>=emptySlots, we don't need to add any "idles", it should be able to scheduled properly.
+                                                    // it equals to tasks.size()
         return tasks.size() + idles;
     }
 };
