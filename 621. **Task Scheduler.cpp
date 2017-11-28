@@ -1,4 +1,5 @@
 //http://www.cnblogs.com/grandyang/p/7098764.html
+// mx is max, mxcnt is how many mx exist
 class Solution {
 public:
     int leastInterval(vector<char>& tasks, int n) {
