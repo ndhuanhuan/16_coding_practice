@@ -18,6 +18,7 @@ public:
         //然后开始另一个循环，遍历每一个账号，首先对帐号的第一个邮箱调用find函数，
         //得到其父串p，然后遍历之后的邮箱，对每个遍历到的邮箱先调用find函数，
         //将其父串的root值赋值为p，这样做相当于将相同账号内的所有邮箱都链接起来了。
+        //Tricky!!!
         for (auto account : accounts) {
             string p = find(account[1], root);
             for (int i = 2; i < account.size(); ++i) {
