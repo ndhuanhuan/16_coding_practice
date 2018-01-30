@@ -1,42 +1,29 @@
 //https://discuss.leetcode.com/topic/117134/java-c-python-o-n-2-solution-using-only-one-grid-matrix/2
 class Solution {
-    public int orderOfLargestPlusSign(int N, int[][] mines) {
-        Set<Integer> banned = new HashSet();
-        int[][] dp = new int[N][N];
-        
-        for (int[] mine: mines)
-            banned.add(mine[0] * N + mine[1]);
-        int ans = 0, count;
-        
-        for (int r = 0; r < N; ++r) {
-            count = 0;
-            for (int c = 0; c < N; ++c) {
-                count = banned.contains(r*N + c) ? 0 : count + 1;
-                dp[r][c] = count;
+       int orderOfLargestPlusSign(int N, vector<vector<int>>& mines) {
+            vector<vector<int>> grid(N, vector<int>(N, N));
+
+            for (auto& m : mines) {
+                grid[m[0]][m[1]] = 0;
             }
-            
-            count = 0;
-            for (int c = N-1; c >= 0; --c) {
-                count = banned.contains(r*N + c) ? 0 : count + 1;
-                dp[r][c] = Math.min(dp[r][c], count);
+
+            for (int i = 0; i < N; i++) {
+                for (int j = 0, k = N - 1, l = 0, r = 0, u = 0, d = 0; j < N; j++, k--) {
+                    grid[i][j] = min(grid[i][j], l = (grid[i][j] == 0 ? 0 : l + 1));
+                    grid[i][k] = min(grid[i][k], r = (grid[i][k] == 0 ? 0 : r + 1));
+                    grid[j][i] = min(grid[j][i], u = (grid[j][i] == 0 ? 0 : u + 1));
+                    grid[k][i] = min(grid[k][i], d = (grid[k][i] == 0 ? 0 : d + 1));
+                }
             }
-        }
-        
-        for (int c = 0; c < N; ++c) {
-            count = 0;
-            for (int r = 0; r < N; ++r) {
-                count = banned.contains(r*N + c) ? 0 : count + 1;
-                dp[r][c] = Math.min(dp[r][c], count);
+
+            int res = 0;
+
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    res = max(res, grid[i][j]);
+                }
             }
-            
-            count = 0;
-            for (int r = N-1; r >= 0; --r) {
-                count = banned.contains(r*N + c) ? 0 : count + 1;
-                dp[r][c] = Math.min(dp[r][c], count);
-                ans = Math.max(ans, dp[r][c]);
-            }
-        }
-        
-        return ans;
+
+            return res;
     }
 }
