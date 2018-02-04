@@ -1,3 +1,4 @@
+//https://www.jianshu.com/p/9f79c250c4fa
 class Solution {
 public:
     vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k) {
