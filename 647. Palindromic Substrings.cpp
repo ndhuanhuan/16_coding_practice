@@ -1,3 +1,4 @@
+//http://www.cnblogs.com/grandyang/p/7404777.html
 class Solution {
 public:
     int countSubstrings(string s) {
