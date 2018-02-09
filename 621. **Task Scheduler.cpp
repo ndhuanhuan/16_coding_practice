@@ -17,8 +17,8 @@ public:
         }
         int partCnt = mx - 1;  //Number of parts seperate by max cnt element
         int partLen = n - (mxCnt - 1);
-        int emptySlots = partCnt * partLen;
-        int taskLeft = tasks.size() - mx * mxCnt;
+        int emptySlots = partCnt * partLen; //number of empty slots, these empty must RESERVE for max cnt element
+        int taskLeft = tasks.size() - mx * mxCnt; //how many tasks left, then compare with previously reserved spaces.
         int idles = max(0, emptySlots - taskLeft); //most hard to understand part. If emptySlots> taskleft, which means we need to add more idles.
                                                    //Otherwise, if taskleft>=emptySlots, we don't need to add any "idles", it should be able to scheduled properly.
                                                     // it equals to tasks.size()
