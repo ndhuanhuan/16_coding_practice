@@ -1,4 +1,5 @@
 //http://www.cnblogs.com/grandyang/p/7098764.html
+//https://discuss.leetcode.com/topic/92966/java-o-n-time-o-1-space-1-pass-no-sorting-solution-with-detailed-explanation
 // mx is max, mxcnt is how many mx exist
 class Solution {
 public:
@@ -14,7 +15,7 @@ public:
                 mxCnt = 1;
             }
         }
-        int partCnt = mx - 1;
+        int partCnt = mx - 1;  //Number of parts seperate by max cnt element
         int partLen = n - (mxCnt - 1);
         int emptySlots = partCnt * partLen;
         int taskLeft = tasks.size() - mx * mxCnt;
