@@ -19,6 +19,7 @@ public:
     int hIndex(vector<int>& citations) {
         int N = citations.size();
         vector<int> count(N+1,0);
+	// 统计各个引用次数对应多少篇文章!
         for (int n : citations)
         {
             if (n > N)
