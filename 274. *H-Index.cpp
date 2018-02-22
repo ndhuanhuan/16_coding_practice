@@ -30,6 +30,8 @@ public:
         for (int i = N; i >= 0; i--)
         {
             sum += count[i];
+	    //sum为到目前为止文章总数（且这些文章引用数肯定大于等于i）， i为引用数， 如果文章数大于等于引用数
+		//由于是从大向小扫描，所以这个位置就是h index（sum逐渐增加，i逐渐减小）
             if (sum >= i)
                 return i;
         }
