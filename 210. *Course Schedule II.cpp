@@ -9,10 +9,6 @@ public:
             graph[a.second].push_back(a.first);
             ++in[a.first];
         }
-        for (auto &a : prerequisites) {
-            graph[a.second].push_back(a.first);
-            ++in[a.first];
-        }
          queue<int> q;
         for (int i = 0; i < numCourses; ++i) {
             if (in[i] == 0) q.push(i);
