@@ -1,5 +1,6 @@
 //http://www.cnblogs.com/grandyang/p/4534586.html
 //https://www.youtube.com/watch?v=7AE-VCGEhtI&t=1214s
+//https://briangordon.github.io/2014/08/the-skyline-problem.html
 class Solution {
 public:
     vector<pair<int, int>> getSkyline(vector<vector<int>>& buildings) {
