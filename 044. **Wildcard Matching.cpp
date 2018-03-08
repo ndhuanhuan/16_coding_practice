@@ -24,7 +24,7 @@ public:
 
 
 
-//https://leetcode.com/problems/wildcard-matching/discuss/17811/My-three-C++-solutions-(iterative-(16ms)-and-DP-(180ms)-and-modified-recursion-(88ms))
+//https://leetcode.com/problems/wildcard-matching/discuss/17810/Linear-runtime-and-constant-space-solution
 class Solution {
 public:
     bool isMatch(string s, string p) {
