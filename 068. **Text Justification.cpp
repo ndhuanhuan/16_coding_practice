@@ -94,3 +94,34 @@ public:
         }
         return result;
     }
+
+
+//rewrite in c++
+class Solution {
+public:
+    vector<string> fullJustify(vector<string>& words, int maxWidth) {
+        vector<string> res;
+        for (int i = 0, j; i < words.size(); ) {
+            int width = 0;                                  // width of words without space
+            for (j = i; j < words.size() && width + words[j].size() + (j - i) <= maxWidth; j++)
+                width += words[j].size();                 /* j is the next word */
+            
+            int space = 1, extra = 0;                       // for last line, space=1
+            if (j - i != 1 && j != words.size()) {          // not 1 word (div-by-zero) and not last line
+                space = (maxWidth - width) / (j - i - 1);   // minus 1 to exclude skip last word
+                extra = (maxWidth - width) % (j - i - 1);
+            }
+            
+            string line;
+            line += words[i];
+            for (i = i + 1; i < j; i++) {                   // move i to j finally
+                for (int s = space; s > 0; s--) line += " ";
+                if (extra-- > 0) line += " ";
+                line += words[i];
+            }
+            for (int s = maxWidth - line.size(); s > 0; s--) line += " ";
+            res.push_back(line);
+        }
+        return res;
+    }
+};
