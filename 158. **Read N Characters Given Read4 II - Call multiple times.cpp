@@ -6,6 +6,7 @@ class Solution {
 public:
     int read(char *buf, int n) {
         for (int i = 0; i < n; ++i) {
+            //Proceed 4 characters every time we already proceeded all 4 characters
             if (readPos == writePos) {
                 writePos = read4(buff);
                 readPos = 0;
