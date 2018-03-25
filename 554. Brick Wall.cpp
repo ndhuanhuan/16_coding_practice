@@ -24,7 +24,7 @@ public:
         unordered_map<int, int> m;
         for (auto a : wall) {
             int sum = 0;
-            for (int i = 0; i < a.size() - 1; ++i) {
+            for (int i = 0; i < a.size() - 1; ++i) {   //we must -1 because we should not count the right most vertical edge
                 sum += a[i];
                 ++m[sum];
                 mx = max(mx, m[sum]);
