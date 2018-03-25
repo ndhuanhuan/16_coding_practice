@@ -1,3 +1,4 @@
+//http://www.cnblogs.com/grandyang/p/6395843.html
 class Solution {
 public:
     int findTargetSumWays(vector<int>& nums, int S) {
