@@ -1,3 +1,4 @@
+//http://www.cnblogs.com/grandyang/p/8433813.html
 class Solution {
 public:
     int countCornerRectangles(vector<vector<int>>& grid) {
