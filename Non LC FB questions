@@ -1,0 +1,2 @@
+Given two identical DOM tree structures, A and B, and a node from A, find the corresponding node in B.
+https://kuzzmi.com/blog/searching-for-a-symmetric-node/
