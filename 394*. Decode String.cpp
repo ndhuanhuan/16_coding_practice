@@ -1,3 +1,4 @@
+//http://www.cnblogs.com/grandyang/p/5849037.html
 class Solution {
 public:
     string decodeString(string s) {
