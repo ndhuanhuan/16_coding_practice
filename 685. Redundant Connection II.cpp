@@ -11,6 +11,8 @@ public:
         vector<int> ans1;
         vector<int> ans2;
         
+        //inside this for loop, it is only used for handle two nodes point to one one node. 
+        //If there's no such case, ans1 will be empty and the graph can be treat as undirectional graph.
         for(auto& edge: edges) {
             int u = edge[0];
             int v = edge[1];
