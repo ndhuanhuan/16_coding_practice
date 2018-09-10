@@ -1,3 +1,4 @@
+//https://zxi.mytechroad.com/blog/graph/leetcode-685-redundant-connection-ii/
 static int fast = []() {ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0); return 0; }();
 class Solution {
 public:
