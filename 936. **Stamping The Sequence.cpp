@@ -1,66 +1,35 @@
+//https://leetcode.com/problems/stamping-the-sequence/discuss/189502/C%2B%2BPython-12ms-Reverse-and-Greedy-O(N2M)
 class Solution {
-    bool canfill(string & target, string & stamp, int i, int l)
-    {
-        bool all = 1;
-        for(int j = 0; j < l; ++j)
-        {
-            if (target[i + j] == '?') continue;
-            all = 0;
-            if (target[i + j] != stamp[j]) return 0;
-        }
-        return !all;
-    }
-    
-    void fill(string & target, int i, int l)
-    {
-        for(int j = 0; j < l; ++j)
-        {
-            target[i + j] = '?';
-        }
-    }
-    
-    bool done(string & target, int l)
-    {
-        for(int i = 0; i < l; ++i)
-        {
-            if (target[i] != '?') return 0;
-        }
-        return 1;
-    }
-    
 public:
-    vector<int> movesToStamp(string stamp, string target) {
-        int n = target.size(), m = stamp.size(), nn = n * 10;
-        vector<int> ans;
-        bool ok = 0;
-        while(ans.size() <= nn)
-        {
-            bool has = 0;
-            for(int i = 0; i + m <= n; ++i)
-            {
-                if (canfill(target, stamp, i, m))
-                {
-                    ans.push_back(i);
-                    fill(target, i, m);
-                    has = 1;
+    vector<int> movesToStamp(string s, string t) {
+        int n = t.size(), m = s.size();
+        
+        auto check = [&](int i) {
+            for (int j = 0; j < m; j++) {
+                if (t[i + j] != '?' && t[i + j] != s[j]) return false;
+            }
+            for (int j = 0; j < m; j++) {
+                if (t[i + j] != '?') return true;
+            }
+            return false;
+        };
+        
+        vector<int> moves;
+        string done(n, '?');
+        
+        while (t != done) {
+            bool move = false;
+            for (int i = 0; i < n - m + 1; i++) {
+                if (check(i)) {
+                    fill(t.begin() + i, t.begin() + i + m, '?');
+                    moves.push_back(i);
+                    move = true;
                 }
             }
-            
-            if (done(target, n))
-            {
-                ok = 1;
-                break;
-            }
-            
-            if (!has) return {};
+            if (!move) return {};
         }
         
-        if (ok)
-        {
-            reverse(ans.begin(), ans.end());
-            return ans; 
-        }
-        
-        return {};
+        reverse(moves.begin(), moves.end());
+        return moves;
     }
 };
