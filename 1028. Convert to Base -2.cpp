@@ -1,4 +1,6 @@
-
+// https://www.geeksforgeeks.org/convert-number-negative-base-representation/
+//n = (?negBase) * quotient + remainder 
+//  = (?negBase) * (quotient + 1) + (remainder - negBase). 
 class Solution {
 public:
     string baseNeg2(int N) {
