@@ -53,3 +53,9 @@ public:
         return m;
     }
 };
+
+
+// https://www.cnblogs.com/Phantom01/p/9490508.html
+// https://www.acwing.com/solution/leetcode/content/579/
+// 因此，这次扔鸡蛋，我们最多能测出 dp[k-1][m-1] (摔碎时能确定的层数) + dp[k][m-1] (没摔碎时能确定的层数) + 1 (本层) 层的结果。
+// Note: 我一直不理解为什么是加在一起， 现在明白了, 因为一共两种可能， 碎了或者不碎（必然其中之一）， 两种可能总共cover了 dp[k-1][m-1] (摔碎时能确定的层数) + dp[k][m-1] (没摔碎时能确定的层数) + 1 (本层)
