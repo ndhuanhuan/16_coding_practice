@@ -14,7 +14,7 @@ public:
         }
 
         for (int i = N-1; i >=0; --i) {
-            K %= size;
+            K %= size;   // tricky part, even K =0, S[i] can be a digit, need to continue this process
             if (K == 0 && isalpha(S[i]))
                 return (string) "" + S[i];
 
