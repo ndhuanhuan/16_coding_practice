@@ -1,6 +1,9 @@
 // https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-873-length-of-longest-fibonacci-subsequence/
 // dp[a, b] represents the length of fibo sequence ends up with (a, b)
 // Then we have dp[a, b] = (dp[b - a, a] + 1 ) or 2
+
+//Tricky: dp(a, b) rely on dp(b-a, a). dp(b-a, a) means longest start from (b-a) to a which is a valid pre sequence for dp(a, b)
+// We need to iterate both a, b 
 class Solution {
 public:
   int lenLongestFibSubseq(vector<int>& A) {
