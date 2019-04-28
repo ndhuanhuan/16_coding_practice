@@ -8,7 +8,7 @@ public:
     int max_dist = s_.empty() ? 0 : *s_.begin();
     auto left = s_.begin();    
     auto right = left;
-    while (left != s_.end()) {
+    while (left != s_.end()) {   //iterate every gap
       ++right;
       int l = *left;
       int r = right != s_.end() ? *right : (2 * (N_ - 1) - *left);      
