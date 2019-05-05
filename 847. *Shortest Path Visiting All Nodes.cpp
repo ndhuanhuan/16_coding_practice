@@ -5,7 +5,7 @@ public:
     const int n = graph.size();
     const int kAns = (1 << n) - 1;
     queue<pair<int, int>> q;
-    vector<vector<int>> visited(n, vector<int>(1 << n));
+    vector<vector<int>> visited(n, vector<int>(1 << n));  //n is the node, vector<int>(1 << n) is the visited node state of current n node. Purpose of this is to not recompute same thing again.
     for (int i = 0; i < n; ++i)
       q.push({i, 1 << i});
     int steps = 0;
