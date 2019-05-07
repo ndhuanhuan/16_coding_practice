@@ -1,5 +1,6 @@
 // https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/discuss/143726/C%2B%2BJavaPython-O(N)-Using-Deque
 // https://buptwc.com/2018/07/02/Leetcode-862-Shortest-Subarray-with-Sum-at-Least-K/
+// https://blog.csdn.net/Tc_To_Top/article/details/87081189
 class Solution {
 public:
     int shortestSubarray(vector<int> A, int K) {
