@@ -4,6 +4,9 @@
 
 // 需要维护一个单调递增的deque。 为什么是递增的： 因为， 你需要用后面的数（和） 去减这个deque里的数来求解。 例子， 如果deque是【0，4，3】 为例， 
 // 4 没有价值，因为假如未来有一个数 x， 且 x - 4 >= k， 那么， x-3 > k 也成立， 且 x和3的距离更短。 在这个例子中， 保存4 就没有了意义。
+
+//这里还有个优化： d.pop_front(); ， 道理类似， 如果当前数字减去deque的front的数字大于k， 那么未来你iterate到后面的数，后面的数和deque的front其实会
+// 更加的距离远， 所以可以直接pop_front掉-> 没有保留价值
 class Solution {
 public:
     int shortestSubarray(vector<int> A, int K) {
