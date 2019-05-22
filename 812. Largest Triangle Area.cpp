@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/largest-triangle-area/discuss/122711/C%2B%2BJavaPython-Solution-with-Explanation-and-Prove
 class Solution {
 public:
     double largestTriangleArea(vector<vector<int>>& p) {
