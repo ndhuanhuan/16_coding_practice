@@ -26,7 +26,7 @@ public:
             if (i == pre) continue;
             dfs(i, root);
             count[root] += count[i];
-            res[root] += res[i] + count[i];
+            res[root] += res[i] + count[i];  // Tricky! total distance: repeatly count previous node
         }
     }
 
