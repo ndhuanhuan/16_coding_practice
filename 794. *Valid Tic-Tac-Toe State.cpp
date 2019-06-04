@@ -1,4 +1,5 @@
 // https://www.cnblogs.com/grandyang/p/9223105.html
+// https://leetcode.com/problems/valid-tic-tac-toe-state/discuss/117580/Straightforward-Java-solution-with-explaination
 class Solution {
 public:
     bool validTicTacToe(vector<string>& board) {
