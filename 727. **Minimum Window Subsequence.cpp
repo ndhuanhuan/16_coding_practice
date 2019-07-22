@@ -2,6 +2,8 @@
 // https://www.cnblogs.com/grandyang/p/8684817.html
 // The goal is the substring with length of min(i-dp[i][n-1])
 // dp[i][n-1] stores the starting index k, we want to minimize i-k, i is current dp ending index inside S.
+// 当 S[i] == T[j] 的时候，实际上起始位置和 dp[i - 1][j - 1] 是一样的，
+// 比如 dbd 包含 bd 的起始位置和 db 包含b的起始位置一样，所以可以继承过来。那么当 S[i] != T[j] 的时候，怎么搞？其实是和 dp[i - 1][j] 是一样的，比如 dbd 包含b的起始位置和 db 包含b的起始位置是一样的。
 class Solution {
 public:
     string minWindow(string S, string T) {
