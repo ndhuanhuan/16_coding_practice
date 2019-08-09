@@ -12,8 +12,9 @@ public:
     }
 };
 
+important: number of non-empty continuous subarrays
 
 input: [1,4,2,5,3]
 calculate: 1 + 2 + 2 + 3 + 3 = 11
 
-For example, number "3" (last element in array) can form [3], [1,3], [1,2,3]
+For example, number "3" (last element in array) can form [3], [2, 5, 3], [1,4,2,5,3]
