@@ -13,7 +13,7 @@ public:
       for (int x1 = 1, x2 = x1 + len - 1; x2 <= m; ++x1, ++x2)
         for (int y1 = 1, y2 = y1 + len - 1; y2 <= n; ++y1, ++y2)
           if (getArea(x1, y1, x2, y1, dp) == len 
-              && getArea(x1, y1, x1, y2, dp) == len
+              && getArea(x1, y1, x1, y2, dp) == len   // get area of edge!
               && getArea(x1, y2, x2, y2, dp) == len
               && getArea(x2, y1, x2, y2, dp) == len)            
             return len * len;        
