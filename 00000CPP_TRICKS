@@ -1,2 +1,6 @@
 std::move(B);
 https://stackoverflow.com/questions/12613428/stl-vector-moving-all-elements-of-a-vector
+
+# create a tuple => tie
+http://www.cplusplus.com/reference/tuple/tie/
+https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-1293-shortest-path-in-a-grid-with-obstacles-elimination/
