@@ -4,3 +4,7 @@ https://stackoverflow.com/questions/12613428/stl-vector-moving-all-elements-of-a
 # create a tuple => tie
 http://www.cplusplus.com/reference/tuple/tie/
 https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-1293-shortest-path-in-a-grid-with-obstacles-elimination/
+
+# 480. Sliding Window Media => tricky insertion sort
+std::rotate => http://www.cplusplus.com/reference/algorithm/rotate/
+std::upper_bound => http://www.cplusplus.com/reference/algorithm/upper_bound/
