@@ -8,3 +8,6 @@ https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-1293-shortest-path-
 # 480. Sliding Window Media => tricky insertion sort
 std::rotate => http://www.cplusplus.com/reference/algorithm/rotate/
 std::upper_bound => http://www.cplusplus.com/reference/algorithm/upper_bound/
+
+# 1316 std::string_view
+https://www.learncpp.com/cpp-tutorial/6-6a-an-introduction-to-stdstring_view/
