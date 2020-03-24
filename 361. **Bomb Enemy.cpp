@@ -1,5 +1,6 @@
 //http://www.cnblogs.com/grandyang/p/5599289.html
-
+// 扫描某个区间， 如果区间扫描过，重复利用。
+// 只有当前位置是空的时候才可以算数
 class Solution {
 public:
     int maxKilledEnemies(vector<vector<char>>& grid) {
