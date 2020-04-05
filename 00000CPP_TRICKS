@@ -15,3 +15,7 @@ https://www.learncpp.com/cpp-tutorial/6-6a-an-introduction-to-stdstring_view/
 # std::accumulate
 https://en.cppreference.com/w/cpp/algorithm/accumulate
 const int sum = std::accumulate(nums.begin(), nums.end(), 0); // 0 is the initial value
+
+# std::distance
+http://www.cplusplus.com/reference/iterator/distance/
+LC 1365
