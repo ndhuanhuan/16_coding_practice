@@ -2,3 +2,6 @@
 LeetCode 459. Repeated Substring Pattern
 LeetCode 28. strStr()
 1392. Longest Happy Prefix
+
+i 永远只是+1
+j 是跳转
