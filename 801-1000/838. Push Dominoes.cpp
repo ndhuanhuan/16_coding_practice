@@ -24,3 +24,30 @@ public:
         return dominoes;
     }
 };
+
+
+// https://zxi.mytechroad.com/blog/searching/leetcode-838-push-dominoes/
+class Solution {
+public:
+  string pushDominoes(string D) {
+    const int n = static_cast<int>(D.size());
+    vector<int> L(n, INT_MAX), R(n, INT_MAX);    
+    
+    for (int i = 0; i < n; ++i)
+      if (D[i] == 'L') {
+        L[i] = 0;
+        for (int j = i - 1; j >= 0 && D[j] == '.'; --j)
+          L[j] = L[j + 1] + 1;
+      } else if (D[i] == 'R') {        
+        R[i] = 0;
+        for (int j = i + 1; j < n && D[j] == '.'; ++j)
+          R[j] = R[j - 1] + 1;
+      }
+    
+    for (int i = 0; i < n; ++i)
+      if (L[i] < R[i]) D[i] = 'L';
+      else if (L[i] > R[i]) D[i] = 'R';
+    
+    return D;
+  }
+};
