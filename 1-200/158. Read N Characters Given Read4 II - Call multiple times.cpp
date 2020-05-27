@@ -1,3 +1,4 @@
+// better explain: https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times/discuss/49607/The-missing-clarification-you-wish-the-question-provided
 //http://www.cnblogs.com/grandyang/p/5181672.html
 class Solution {
 public:
