@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/alien-dictionary/discuss/157298/C%2B%2B-BFS-and-Topoligical-Sort-with-explanation
 // https://leetcode.com/problems/alien-dictionary/discuss/622390/C%2B%2B-topological-sort-solution
+
+// Explain: http://fisherlei.blogspot.com/2017/07/leetcode-alien-dictionary-solution.html
 class Solution {
 public:
     string alienOrder(vector<string>& words) {
