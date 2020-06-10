@@ -1,5 +1,7 @@
 // https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-1420-build-array-where-you-can-find-the-maximum-exactly-k-comparisons/
 // https://www.acwing.com/solution/LeetCode/content/11771/
+// https://leetcode.com/problems/build-array-where-you-can-find-the-maximum-exactly-k-comparisons/discuss/586576/C%2B%2B-Bottom-Up-Dynamic-Programming-with-Explanation
+// Third link is the best
 int mem[51][101][51] = {0};
 class Solution {
 public:
