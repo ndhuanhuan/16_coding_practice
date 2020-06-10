@@ -1,4 +1,5 @@
 // https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-1420-build-array-where-you-can-find-the-maximum-exactly-k-comparisons/
+// https://www.acwing.com/solution/LeetCode/content/11771/
 int mem[51][101][51] = {0};
 class Solution {
 public:
