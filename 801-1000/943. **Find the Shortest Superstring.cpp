@@ -1,4 +1,8 @@
 // https://zxi.mytechroad.com/blog/searching/leetcode-943-find-the-shortest-superstring/
+// 3 parts: 
+// 1. calculate prefix => optimize
+// 2. dp
+// 3. reconstruct path
 class Solution {
 public:
   string shortestSuperstring(vector<string>& A) {        
