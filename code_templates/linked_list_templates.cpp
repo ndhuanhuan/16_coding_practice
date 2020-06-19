@@ -31,3 +31,21 @@ while (slow && fast && fast->next) {
     }
 }
 return false;   // change return value to fit specific problem
+
+
+
+
+
+// Reverse Linked List
+ListNode* reverseList(ListNode* head) {
+    if(head == nullptr || head->next == nullptr) return head;      
+    ListNode *pre = NULL;
+    while(head) {
+        ListNode *t = head->next;
+        head->next = pre;
+        pre = head;
+        head = t;
+    }
+
+    return pre;
+}
