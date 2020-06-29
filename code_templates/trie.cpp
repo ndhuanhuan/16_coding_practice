@@ -1,5 +1,5 @@
-https://zxi.mytechroad.com/blog/data-structure/leetcode-208-implement-trie-prefix-tree/
-
+// https://zxi.mytechroad.com/blog/data-structure/leetcode-208-implement-trie-prefix-tree/
+// simplified version: https://zxi.mytechroad.com/blog/searching/leetcode-212-word-search-ii/
 class Trie {
 public:
     /** Initialize your data structure here. */
