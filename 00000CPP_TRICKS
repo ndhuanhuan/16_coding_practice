@@ -1,5 +1,8 @@
 std::move(B);
 https://stackoverflow.com/questions/12613428/stl-vector-moving-all-elements-of-a-vector
+https://stackoverflow.com/questions/3413470/what-is-stdmove-and-when-should-it-be-used
+https://zxi.mytechroad.com/blog/desgin/leetcode-1472-design-browser-history/
+Sometimes you need to do something like this: urls_.push_back(std::move(homepage)); 
 
 # create a tuple => tie
 http://www.cplusplus.com/reference/tuple/tie/
@@ -29,7 +32,6 @@ LC 1387
 # const vs constexpr
 https://stackoverflow.com/questions/14116003/difference-between-constexpr-and-const
 
-
 # std::min_element
 // LeetCode 931. Minimum Falling Path Sum
 int myints[] = {3,7,2,5,6,4,9};
@@ -43,3 +45,6 @@ std::cout << "The smallest element is " << *std::min_element(myints,myints+7) <<
 // ENUM usage
 enum class State { NONE = 0, COVERED = 1, CAMERA = 2 };
 https://zxi.mytechroad.com/blog/tree/leetcode-968-binary-tree-cameras/
+
+# static_cast
+static_cast<int>(urls_.size())
